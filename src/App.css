@@ -1,0 +1,122 @@
+.app-background {
+  background: linear-gradient(120deg, #222, #d6933b, #f0ad4e);
+  background-attachment: fixed;
+  min-height: 100vh;
+}
+
+
+/* Navbar */
+.custom-navbar {
+  background: linear-gradient(120deg, #222, #d6933b, #f0ad4e);
+  border-radius: 50px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  padding: 10px 20px;
+  position: sticky;
+  top: 10px;
+  width: 85%;
+  max-width: 100%;
+  margin: 0 auto;
+  z-index: 1000;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  border: 1px solid black;
+}
+
+/* Container */
+.custom-navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Logo-Styling */
+.custom-navbar .navbar-brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: white;
+  transition: color 0.3s ease;
+}
+
+/* Navbar Links */
+.custom-navbar .nav-links ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  margin: 0;
+  padding: 0;
+}
+
+/* Navbar Link-Styling */
+.custom-navbar .nav-links ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 1rem;
+  padding: 8px 12px;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+  border-radius: 20px;
+  font-weight: bold;
+  position: relative;
+}
+
+/* Hover-Effekt */
+.custom-navbar .nav-links ul li a:hover {
+  background: rgba(0, 0, 0, 0.7);
+  border: 2px solid #f0ad4e;
+  border-radius: 20px;
+  color: white;
+  text-shadow: 0 0 5px rgba(240, 173, 78, 0.8);
+  padding: 8px 12px;
+  transition: all 0.3s ease;
+}
+
+
+/* Mobile Navbar */
+.navbar-toggler {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: white;
+}
+
+/* Mobile Ansicht */
+@media (max-width: 700px) {
+  .navbar-toggler {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    background: linear-gradient(120deg, #222, #d6933b, #f0ad4e);
+    border: 2px solid #f0ad4e;
+    border-radius: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  }
+
+  .nav-links.show {
+    display: block;
+  }
+
+  .nav-links ul {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .nav-links ul li {
+    padding: 10px 0;
+  }
+
+  .nav-links ul li a {
+    display: block;
+    padding: 10px;
+  }
+}
