@@ -12,7 +12,7 @@ function NavBar({ navItems }: NavBarProps) {
   return (
     <nav className="custom-navbar">
       <div className="container">
-        <Link to="/" className="navbar-brand">
+        <Link to="/AutoLux/" className="navbar-brand">
           <i className="fa-solid fa-car"></i> AutoLux
         </Link>
 

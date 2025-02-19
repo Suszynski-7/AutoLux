@@ -50,7 +50,8 @@ function CarList() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch("/cars.json");
+        const response = await fetch(`${import.meta.env.BASE_URL}cars.json`);
+
         if (!response.ok) {
           throw new Error("Netzwerkantwort war nicht ok");
         }
@@ -58,10 +59,12 @@ function CarList() {
         const transformedData = data.map((car: Car) => ({
           ...car,
           images: [
-            ...(car.images || (car.img ? [car.img] : [])),
+            ...(car.images || (car.img ? [`${import.meta.env.BASE_URL}${car.img.replace(/^\//, "")}`] : [])), 
             placeholderImages[0],
           ],
         }));
+        console.log(import.meta.env.BASE_URL);
+        
         setCars(transformedData);
         setOriginalCars(transformedData);
         setFilteredCars(transformedData);
@@ -74,7 +77,7 @@ function CarList() {
     };
 
     fetchData();
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   // Modal öffnen: Wenn keine Bilder vorhanden sind, verwende Platzhalter
