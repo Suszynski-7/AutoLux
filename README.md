@@ -27,10 +27,13 @@ AutoLux ist eine moderne React- und TypeScript-Anwendung, die einen Fahrzeug-Sho
    cd AutoLux
 
 3. **Abhängigkeiten installieren**
+   ```sh
    npm install
 
-4. **Entwicklungsserver starten**
+5. **Entwicklungsserver starten**
+   ```sh
    npm run dev
 
-5. **Projekt im Browser starten**
+7. **Projekt im Browser starten**
+   ```sh
    http:localhost:----
