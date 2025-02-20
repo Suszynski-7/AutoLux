@@ -1,10 +1,10 @@
 # AutoLux – Exklusiver Fahrzeug-Showroom
 
-AutoLux ist eine moderne React- und TypeScript-Anwendung, die einen exklusiven Fahrzeug-Showroom präsentiert. Die App zeigt 16 luxuriöse Fahrzeuge in einer ansprechenden Kartenübersicht, bietet Filter- und Sortierfunktionen sowie detaillierte Ansichten mit einer Bildergalerie für jedes Fahrzeug.
+AutoLux ist eine moderne React- und TypeScript-Anwendung, die einen Fahrzeug-Showroom darstellt. Die Anwendung zeigt 16 Fahrzeuge in einer Bootstrap-Kartenübersicht und bietet Filter- und Sortierfunktionen sowie detaillierte Ansichten mit einer Bildergalerie für jedes Fahrzeug.
 
 ## Features
 
-- **Fahrzeugkatalog**: Anzeige von Sport- und Luxusautos in einer Kartenübersicht.
+- **Fahrzeug-Showroom**: Anzeige von Sport- und Luxusautos in einer Bootstrap-Kartenübersicht.
 - **Filter & Sortierung**: Fahrzeuge können nach Marke, Modell, Preis, Baujahr und Fahrzeugtyp gefiltert sowie sortiert werden.
 - **Detailansicht**: Beim Klick auf „Details“ wird ein Modal geöffnet, das weitere Informationen sowie eine Bildergalerie anzeigt.
 - **Responsive Design**: Für Desktop und mobile Geräte, mit dynamischen UI-Anpassungen.
