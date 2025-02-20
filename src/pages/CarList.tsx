@@ -63,7 +63,6 @@ function CarList() {
             placeholderImages[0],
           ],
         }));
-        console.log(import.meta.env.BASE_URL);
         
         setCars(transformedData);
         setOriginalCars(transformedData);
@@ -80,7 +79,6 @@ function CarList() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  // Modal öffnen: Wenn keine Bilder vorhanden sind, verwende Platzhalter
   const handleShowModal = (car: Car) => {
     setSelectedCar({
       ...car,
@@ -127,7 +125,7 @@ function CarList() {
     [sortOption, originalCars]
   );
 
-  // Filter-Funktion: Filtert nach Marke, Modell, Preis und Typ
+  // Filter-Funktion
   const filterCars = useCallback((): Car[] => {
     let filtered = [...cars];
     if (filterMake) {
@@ -193,8 +191,8 @@ function CarList() {
   if (error) return <p>{error}</p>;
 
   return (
-    <div className="aa">
-      {/* Filterbereich */}
+    <div className="container">
+      {/* Autofilter */}
       <div className="searchbar-container">
         <InputGroup className="inputGroup-container">
           <Form.Control
